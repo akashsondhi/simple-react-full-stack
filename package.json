@@ -1,17 +1,17 @@
 {
-  "name": "simple-react-full-stack",
+  "name": "prime-median-finder",
   "version": "1.0.0",
-  "description": "Boilerplate to build a full stack web application using React, Node.js, Express and Webpack.",
+  "description": "Application that finds median of the array of all the prime numbers less than the number entered by the user",
   "main": "src/server/index.js",
   "scripts": {
     "build": "webpack --mode production",
     "start": "npm run build && node src/server/index.js",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon src/server/index.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "mocha-test": "mocha src/server/tests/*.js --exit"
   },
-  "author": "Sandeep Raveesh",
-  "license": "ISC",
+  "author": "Akash Sondhi",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "express": "^4.16.3",
@@ -25,6 +25,9 @@
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.0",
     "babel-loader": "^8.0.0",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "mocha": "^5.1.1",
     "clean-webpack-plugin": "^1.0.0",
     "concurrently": "^4.0.0",
     "css-loader": "^2.0.0",
